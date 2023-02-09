@@ -185,17 +185,3 @@ const data = {
       }
     ]
   }
-
-
-let events = data.events;
-let template = "";
-
-for (let i = 0; i < events.length; i++) {
-    template += "<div class=card>  <img src=" + 
-    events[i].image + "class=card-img-top style= height:18rem> <div class=card-body> <h5 class=card-title> " + 
-    events[i].name + "</h5><p class=card-text>" + 
-    events[i].description + 
-    "</p><a href=./details.html class=btn btn-primary style=color:blue>View more!</a></div></div>";
-}
-console.log(template);
-document.getElementById("xxx").innerHTML = template;
