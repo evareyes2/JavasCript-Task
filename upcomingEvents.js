@@ -10,7 +10,7 @@ fetch('https://mindhub-xj03.onrender.com/api/amazing')
 .then( res => {
     eventos = res.events
     fechaBase = new Date(res.currentDate)
-    eventos = eventos.filter(evento => new Date(evento.date)<fechaBase)
+    eventos = eventos.filter(evento => new Date(evento.date)>fechaBase)
     crearCheckbox(eventos, checkboxs)
     imprimirCards(eventos, contEventos)
     search.addEventListener('keyup', filtrar)
